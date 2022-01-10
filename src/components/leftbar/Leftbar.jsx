@@ -12,10 +12,12 @@ import {
   ShoppingBasketOutlined,
 } from "@material-ui/icons";
 import React from "react";
+import { useSelector } from "react-redux";
 import MenuLink from "../menuLink/MenuLink";
 import "./leftbar.css";
 
 export default function Leftbar() {
+  const user = useSelector((state) => state.user)
   return (
     <div className="leftbar">
       <div className="leftbarWrapper">
