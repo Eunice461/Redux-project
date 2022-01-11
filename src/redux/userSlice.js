@@ -7,7 +7,7 @@ export const userSlice = createSlice({
             name: "Dara", 
             email: "dara@gmail.com" 
         },
-        pending:false,
+        pending:null,
         error:false,
 	},
 	reducers: {
@@ -15,7 +15,7 @@ export const userSlice = createSlice({
             state.pending = true;
         },
         updateSuccess: (state, action) => {
-            state.pendind = false;
+            state.pending = false;
             state.userInfo = action.payload;
         },
         updateError: (state) => {
